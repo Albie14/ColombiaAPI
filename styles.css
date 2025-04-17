@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Parkinsans:wght@300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+  --fuente1: 'Kumbh Sans', sans-serif;
+  --fuente2: 'Parkinsans', sans-serif;
+  --fuente3: 'Space Mono', monospace;
+}
+body{
+  position: relative;
+}
+header{
+  width: 99.9%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(62, 68, 62, 0.731), rgba(141, 141, 140, 0));
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 10px 10px 10px rgba(49, 50, 48, 0.2);
+ 
+  .logo{
+    width: 20%;
+    height: 100%;
+    margin-left: 80px;
+  
+  
+    a img{
+      width: 30%;
+      height: 100%;
+      transition: all 0.5s ease-in-out;
+      filter:blur(0.9px)
+    }
+    a img:hover{
+      filter:drop-shadow(0.5);
+      transition: all 0.5s ease-in-out;
+      filter: blur(0);
+    }
+  }
+  
+.nav{
+  margin-right: 80px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+
+.menu-nav{
+      text-decoration: none;
+      font-size: 20px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+      font-weight: 700;
+      color: rgba(49, 50, 48, 0.947);
+      filter:blur(0.9px);
+      transition: all 0.5s;
+      width: auto;
+      flex: 1;
+
+
+    }
+   
+
+    .menu-nav:hover{
+      filter: blur(0);
+      color: black;
+      font-weight: 800;
+      background: blur(1px);
+   
+     
+    }
+    .menu-nav:hover h2{
+      transition: all 0.3s ease;
+    }
+    .plegable{
+      display: none;
+      position: absolute;
+      background-color: rgba(200, 200, 200, 0.4);
+      border-bottom: 1.2px solid #fff;
+      border-right:  1.2px solid #fff;
+      border-left: 1.2px solid #fff;
+      width: 12%;
+      height: 120px;
+      z-index: 10000;
+      top: 10%;
+      right: 14.25%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin-top: 10px;
+      transform: translateY(38%);
+      transition: all 2s ease;
+    }
+    .plegable::after{
+      content: '';
+      position: absolute;
+      top: -10px;
+      right:.10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid rgba(200, 200, 200, 0.4);;
+    }
+    .submenu li{
+      width: 100%;
+      text-decoration: none;
+      list-style: none;
+      transition: all .9s ease;
+      height: 30%;
+      display: flex;
+      align-items: center;
+
+      a{
+        text-decoration: none;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        color: rgba(49, 50, 48, 0.947);
+        font-weight: 700;
+        width: 300%;
+        font-size: 100%;
+      }
+    }
+ 
+    .submenu li:hover{
+      filter: blur(0.5);
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: all .9s ease;
+      color: black;
+      background: blur(1px);
+    }
+    
+
+     ul{
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 90px;
+  
+    }
+    #menu-plegable{
+      display: flex;
+    }
+} 
+}
+#btn-cerrar{
+  display: none;
+  transition: all .9s ease; 
+}
+.fa-solid{
+  transition: all .9s ease; 
+  margin-left: 10px;
+}
+
+.fa-solid:hover{
+  scale: 1.2;
+  transition: all .9s ease;
+}
+#btn-abrir{
+  transition: all .9s ease; 
+  display: flex;
+}
+
+
+main{
+  padding-top: calc(100px + 1em);
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+
+  #video-main{
+    width: 80%;
+    height: 80%;
+    margin: 5% 10%;
+    }
+  
+  .box-container{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+  }
+  .box{
+    border: white;
+    background-color: white;
+    width: 18%;
+    height: 100%;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    color: rgba(49, 50, 48, 0.947);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+  }
+  .box:hover{
+    color: rgb(252, 252, 249);
+    box-shadow: 12px 12px 15px rgba(49, 50, 48, 0.5), -12px -12px 15px rgba(49, 50, 48, 0.5);
+    transition: all .9s ease;
+    scale: 1.05;
+    background: linear-gradient(rgba(62, 68, 62, 0.731), rgba(141, 141, 140, 0));
+  }
+}
+
+footer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 10px;
+  background: linear-gradient(rgba(141, 141, 140, 0), rgba(62, 68, 62, 0.5));
+  text-shadow: 0 0 10px rgba(49, 50, 48, 0.5);
+  width: 100%;
+  position:static;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+/* contenedores informacion */
+
+
+.contenedor-general{
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.contenedor-individual{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow:  5px 5px 5px rgba(49, 50, 48, 0.2), -5px -5px 5px rgba(49, 50, 48, 0.2);
+
+    .txt-contenedor h2{
+      font-family: var(--fuente1);
+      font-size: 18px;
+      color: rgb(37, 36, 36);
+      font-weight: 600;
+      text-align: center;
+    }
+
+  .img-contenedor{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+
+  }
+  img:hover{
+    scale: 1.1;
+    transition: all 0.5s ease;
+    
+  }
+
+}
+
+.pantalla-completa{
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.589);
+  transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(4px);
+  .x-icon{
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    p{
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      border-radius: 15px;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      transition: all 0.2s ease;
+    }
+    p:hover{
+      border: 2px solid rgba(210, 209, 209, 0.299);
+      color: rgba(210, 209, 209, 0.299);
+    }
+
+  }
+  .contenedor-informacion{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgba(72, 58, 58, 0.313);
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.689);
+    overflow: auto;
+    
+  
+    .img-apliada{
+      width: 100%;
+      height: 50%;
+      padding: 0;
+      margin: 0;
+
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .txt-ampliada{
+      color: #e0e0e0;
+      font-family: var(--fuente1);
+      font-size: 15px;
+      font-weight: 500;
+
+      h5, h6{
+        line-height: 190%;
+        text-align: justify;
+      }
+    }
+  }
+    
+  ::-webkit-scrollbar{
+    background: rgba(71, 70, 70, 0);
+    color: aqua;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 10px;
+    
+  }
+  ::-webkit-scrollbar-thumb{
+    background: rgba(253, 253, 253, 0.63);
+    border-radius: 20px;
+  }
+
+ 
+}
+.mapa{
+  width: 50%;
+  height: 90%;
+  position: relative;
+}
+
+.mapa img:hover{
+  scale: 1;
+}
+
+
+.marcadores{
+  width: 6px;
+  height: 6px;
+  background-color:red;
+  border: 3px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all .2s ease;
+  display: flex;
+}
+
+
+.marcadores:hover{
+  border: 3px solid white;
+  outline: 2px solid red;
+}
+
+.nombre-departamento{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  font-family: var(--fuente2);
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 10px;
+  padding: 10px 10px;
+  width: fit-content;
+  min-height: auto;
+  max-height: 80px;
+  transition: all 0.3s ease;
+  word-break: keep-all;
+  white-space: nowrap;
+  position: absolute;
+  top: -35px;
+  left: 8;
+}
+.marcadores:hover .nombre-departamento{
+  display: flex;
+}
+#marcador-arauca{
+  position: absolute; 
+  top: 278px; 
+  left:400px;
+}
+#marcador-atlántico{
+  position: absolute;
+  top: 83px;
+  left: 200px;
+}
+#marcador-bogotá{
+  position: absolute;
+  top: 382px;
+  left: 270px;
+}
+#marcador-cundinamarca{
+  position: absolute;
+  top: 355px;
+  left: 250px;
+}
+#marcador-bolívar{
+  position: absolute;
+  top: 200px;
+  left: 235px;
+}
+#marcador-boyacá{
+  position: absolute;
+  top: 348px;
+  left: 290px;
+}
+#marcador-caldas{
+  position: absolute;
+  top: 360px;
+  left: 170px;
+}
+#marcador-caquetá{
+  position: absolute;
+  top: 575px;
+  left: 250px;
+}
+#marcador-casanare{
+  position: absolute;
+  top: 325px;
+  left: 355px;
+}
+#marcador-cauca{
+  position: absolute;
+  top: 500px;
+  left: 100px;
+}
+#marcador-cesar{
+  position: absolute;
+  top: 140px;
+  left: 280px;
+}
+#marcador-chocó{
+  position: absolute;
+  top: 312px;
+  left: 100px;
+}
+#marcador-córdoba{
+  position: absolute;
+  top: 195px;
+  left: 160px;
+}
+#marcador-guainía{
+  position: absolute;
+  top: 460px;
+  left: 500px;
+}
+#marcador-guaviare{
+  position: absolute;
+  top: 505px;
+  left: 330px;
+}
+#marcador-huila{
+  position: absolute;
+  top: 495px;
+  left: 165px;
+}
+#marcador-la-guajira{
+  position: absolute;
+  top: 72px;
+  left: 290px;
+}
+#marcador-magdalena{
+  position: absolute;
+  top: 115px;
+  left: 225px;
+}
+#marcador-amazonas{
+  position: absolute;
+  top: 660px;
+  left: 330px;
+}
+#marcador-antioquia{
+  position: absolute;
+  top: 270px;
+  left: 170px;
+}
+#marcador-meta{
+  position: absolute;
+  top: 435px;
+  left: 290px;
+}
+#marcador-nariño{
+  position: absolute;
+  top: 550px;
+  left: 60px;
+}
+#marcador-quindío{
+  position: absolute;
+  top: 385px;
+  left: 166px;
+}
+#marcador-norte-de-santander{
+  position: absolute;
+  top: 190px;
+  left: 290px;
+}
+#marcador-putumayo{
+  position: absolute;
+  top: 570px;
+  left: 145px;
+}
+#marcador-risaralda{
+  position: absolute;
+  top: 350px;
+  left: 147px;
+}
+#marcador-san-andrés-y-providencia{
+  position: absolute;
+  top: 75px;
+  left: 45px;
+}
+#marcador-santander{
+  position: absolute;
+  top: 278;
+  left: 270px;
+}
+#marcador-sucre{
+  position: absolute;
+  top: 160px;
+  left: 190px;
+}
+#marcador-tolima{
+  position: absolute;
+  top: 408px;
+  left: 190px;
+}
+#marcador-valle-del-cauca{
+  position: absolute;
+  top: 418px;
+  left: 140px;
+}
+#marcador-vaupés{
+  position: absolute;
+  top: 565px;
+  left: 400px;
+}
+#marcador-vichada{
+  position: absolute;
+  top: 360px;
+  left: 450px;
+}
