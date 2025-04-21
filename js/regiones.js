@@ -1,4 +1,3 @@
-//btn abrir y cerrar menu
 const btnCerrar = document.getElementById('btn-cerrar')
 const btnAbrir = document.getElementById('btn-abrir')
 const menu = document.querySelector('.plegable');
@@ -21,34 +20,34 @@ btnCerrar.addEventListener('click', ()=>{
 
 }) 
 
-fetch('https://api-colombia.com/api/v1/Department')
+
+fetch('https://api-colombia.com/api/v1/Region')
     .then(response=>{
         if(!response.ok){
             throw new Error ('Ocurrió un error al obtener los datos');
         }
         return response.json();
     })
+
     .then(data=>{
+        
         const contenedorGeneral = document.querySelector('.contenedor-general');
         const contenedorMapa = document.createElement('div');
         contenedorMapa.className = 'contenedor-individual mapa';
-        let marcadoresHTML = `<img src="/multimedia/mapa.gif" alt="mapa">`
+        let marcadoresHTML = `<img src="/multimedia/regiones.png" alt="mapa">`
 
         data.forEach((dato, index)=>{
 
             //para modificar los espacios y mayusculas de los nombres a la pasarlos como dato valido para un id
             const nombres = (dato.name).replace(/\s+/g, "-").toLowerCase();
-            
-            
 
             marcadoresHTML += `<div class="marcadores" id="marcador-${nombres}">
                                     <span class="nombre-departamento">${dato.name}</span>
                                 </div>`;
         });
-
         contenedorMapa.innerHTML = marcadoresHTML;
         contenedorGeneral.appendChild(contenedorMapa);
-    
+        
         const puntosDeReferencia = document.querySelectorAll('.marcadores');
         puntosDeReferencia.forEach(punto=>{
             punto.addEventListener('click', (event)=>{
@@ -73,11 +72,8 @@ fetch('https://api-colombia.com/api/v1/Department')
                     
                     <div class="contenedor-informacion">
                             <div class="txt-ampliada">
-                                <h2>Nombre: ${datos.name}</h2>
-                                <h5>Capital: ${datos.cityCapital?.name}</h5>
-                                <h5>Superficie: ${datos.surface} Km2</h5>
-                                <h5>Poblacion: ${datos.population} personas</h5>
-                                <h6>Descripcion: ${datos.description}</h6>
+                                <h2>Nombre: Region ${datos.name}</h2>
+                                <h5>Descripcion: ${datos.description}</h5>
                             </div>
                     </div>
                 `;
