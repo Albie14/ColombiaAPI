@@ -74,7 +74,7 @@ fetch('https://api-colombia.com/api/v1/President')
                             <div class="txt-ampliada">
                                 <h2>Nombre: ${info.name} ${info.lastName}</h2>
                                 <h5>Periodo Presindencial: </h5>
-                                <h6>Desde: ${info.startPeriodDate} - Hasta: ${info.endPeriodDate}</h6>
+                                <h6>Desde: ${info.startPeriodDate}  /  Hasta: ${info.endPeriodDate}</h6>
                                 <h5>Partido Politico: ${info.politicalParty || "No disponibles"}</h5>
                                 <h6>Biografia: ${info.description || "No disponible"}</h6>
                             </div>
